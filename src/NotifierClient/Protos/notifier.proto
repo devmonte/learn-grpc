@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Notifier";
+
+service Notifier {
+	rpc Notify (NotificationRequest) returns (NotificationReply){}
+}
+
+message NotificationRequest {
+	string content = 1;
+	int32 id = 2;
+}
+
+message NotificationReply {
+	string result = 1;
+}
